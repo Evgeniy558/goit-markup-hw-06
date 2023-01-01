@@ -448,11 +448,127 @@
             </li>
           </ul>
         </div>
+        <form action="#">
+          <div class="form-input-emailnewsletter">
+            <label for="email">
+              <p class="form-input-emailnewsletter__text">
+                Zapisz się do newslettera
+              </p>
+              <br />
+              <input
+                class="form-input-emailnewsletter__input-area"
+                type="email"
+                id="email"
+                name="emailnewsletter"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+            <button type="submit" class="footer-btn">
+              Zapisz się
+              <svg width="24px" height="24px">
+                <use href="images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
     <div class="modal is-hidden" data-modal>
-      <div class="form">
-        <button class="btn-modal" data-modal-close>&times;</button>
+      <div class="modal__window">
+        <form action="#" validate class="modal__window__form">
+          <h2 class="modal__window__form__title">
+            Zostaw swoje dane w formularzu poniżej
+          </h2>
+          <div class="modal__window__form__main-part">
+            <div class="modal__window__form__main-part__inputbox">
+              <label for="name">
+                <p>Imie</p>
+              </label>
+              <div class="modal__window__form__main-part__inputbox__input">
+                <svg width="12px" height="12px">
+                  <use href="images/icons.svg#icon-person"></use>
+                </svg>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  pattern="[a-zA-Z0-9\s]+"
+                  required
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div class="modal__window__form__main-part__inputbox">
+              <label for="telefon">
+                <p>Telefon</p>
+              </label>
+              <div class="modal__window__form__main-part__inputbox__input">
+                <svg width="13px" height="13px">
+                  <use href="images/icons.svg#icon-tel-1"></use>
+                </svg>
+                <input
+                  id="telefon"
+                  type="text"
+                  name="customer_tel"
+                  pattern="[7-9]{1}[0-9]{8}"
+                  title="Phone number with 7-9 and remaing 9 digit with 0-9"
+                  required
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div class="modal__window__form__main-part__inputbox">
+              <label for="email_form">
+                <p>Email</p>
+              </label>
+              <div class="modal__window__form__main-part__inputbox__input">
+                <svg width="15px" height="12px">
+                  <use href="images/icons.svg#icon-letter-2"></use>
+                </svg>
+                <input
+                  id="email_form"
+                  type="email"
+                  name="customer_mail"
+                  required
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div class="modal__window__form__main-part__inputbox">
+              <label for="comments">
+                <p>Komentarz</p>
+              </label>
+              <textarea
+                class="modal__window__form__main-part__inputbox__textarea"
+                name=""
+                rows="5"
+                id="comments"
+                type="textarea"
+                name="customer_comments"
+                placeholder="Wprowadź tekst"
+              >
+              </textarea>
+            </div>
+          </div>
+          <label class="modal__window__form__chekbox" for="checkbox_form">
+            <input
+              class="modal__window__form__chekbox__input"
+              id="checkbox_form"
+              type="checkbox"
+              name="comments"
+            />
+            <svg width="16px" height="15px">
+              <use href="images/icons.svg#icon-check"></use>
+            </svg>
+            Oświadczam iż akceptuję&nbsp;<a href="#">Regulamin</a
+            >&nbsp;i&nbsp;<a href="#">Politykę Prywatności.</a>
+          </label>
+          <button class="modal__window__form__btn" type="submit">Wyślij</button>
+        </form>
+        <button class="modal__window__close-btn" data-modal-close>
+          &times;
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>

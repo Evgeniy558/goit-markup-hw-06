@@ -448,15 +448,14 @@
             </li>
           </ul>
         </div>
-        <form action="#">
-          <div class="form-input-emailnewsletter">
+        <form class="form-footer" action="#">
+          <div class="form-footer-emailnewsletter">
             <label for="email">
-              <p class="form-input-emailnewsletter__text">
+              <p class="form-footer-emailnewsletter__text">
                 Zapisz się do newslettera
               </p>
-              <br />
               <input
-                class="form-input-emailnewsletter__input-area"
+                class="form-footer-emailnewsletter__input-area"
                 type="email"
                 id="email"
                 name="emailnewsletter"
@@ -465,7 +464,7 @@
               />
             </label>
             <button type="submit" class="footer-btn">
-              Zapisz się
+              Zapisz&nbsp;się
               <svg width="24px" height="24px">
                 <use href="images/icons.svg#icon-icon-send"></use>
               </svg>
@@ -484,56 +483,56 @@
             <div class="modal__window__form__main-part__inputbox">
               <label for="name">
                 <p>Imie</p>
+                <div class="modal__window__form__main-part__inputbox__input">
+                  <svg width="12px" height="12px">
+                    <use href="images/icons.svg#icon-person"></use>
+                  </svg>
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    pattern="[a-zA-Z0-9\s]+"
+                    required
+                    placeholder=""
+                  />
+                </div>
               </label>
-              <div class="modal__window__form__main-part__inputbox__input">
-                <svg width="12px" height="12px">
-                  <use href="images/icons.svg#icon-person"></use>
-                </svg>
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  pattern="[a-zA-Z0-9\s]+"
-                  required
-                  placeholder=""
-                />
-              </div>
             </div>
             <div class="modal__window__form__main-part__inputbox">
               <label for="telefon">
                 <p>Telefon</p>
+                <div class="modal__window__form__main-part__inputbox__input">
+                  <svg width="13px" height="13px">
+                    <use href="images/icons.svg#icon-tel-1"></use>
+                  </svg>
+                  <input
+                    id="telefon"
+                    type="text"
+                    name="customer_tel"
+                    pattern="[7-9]{1}[0-9]{8}"
+                    title="Phone number with 7-9 and remaing 9 digit with 0-9"
+                    required
+                    placeholder=""
+                  />
+                </div>
               </label>
-              <div class="modal__window__form__main-part__inputbox__input">
-                <svg width="13px" height="13px">
-                  <use href="images/icons.svg#icon-tel-1"></use>
-                </svg>
-                <input
-                  id="telefon"
-                  type="text"
-                  name="customer_tel"
-                  pattern="[7-9]{1}[0-9]{8}"
-                  title="Phone number with 7-9 and remaing 9 digit with 0-9"
-                  required
-                  placeholder=""
-                />
-              </div>
             </div>
             <div class="modal__window__form__main-part__inputbox">
               <label for="email_form">
                 <p>Email</p>
+                <div class="modal__window__form__main-part__inputbox__input">
+                  <svg width="15px" height="12px">
+                    <use href="images/icons.svg#icon-letter-2"></use>
+                  </svg>
+                  <input
+                    id="email_form"
+                    type="email"
+                    name="customer_mail"
+                    required
+                    placeholder=""
+                  />
+                </div>
               </label>
-              <div class="modal__window__form__main-part__inputbox__input">
-                <svg width="15px" height="12px">
-                  <use href="images/icons.svg#icon-letter-2"></use>
-                </svg>
-                <input
-                  id="email_form"
-                  type="email"
-                  name="customer_mail"
-                  required
-                  placeholder=""
-                />
-              </div>
             </div>
             <div class="modal__window__form__main-part__inputbox">
               <label for="comments">
@@ -542,7 +541,7 @@
               <textarea
                 class="modal__window__form__main-part__inputbox__textarea"
                 name=""
-                rows="5"
+                rows="8"
                 id="comments"
                 type="textarea"
                 name="customer_comments"

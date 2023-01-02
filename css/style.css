@@ -255,23 +255,33 @@ body {
   transition: var(--transition);
 }
 
-.form-input-emailnewsletter {
+.form-footer {
+  width: 570px;
   margin-left: 76px;
   margin-top: 72px;
+}
+
+.form-footer-emailnewsletter {
   display: flex;
   align-items: flex-end;
   gap: 12px;
 }
 
-.form-input-emailnewsletter__text {
+/* .form-footer-emailnewsletter label {
+  display: inline-block;
+} */
+
+.form-footer-emailnewsletter__text {
   margin-top: 0px;
   margin-bottom: 20px;
   text-transform: uppercase;
   display: inline-block;
 }
-.form-input-emailnewsletter__input-area {
-  height: 50px;
-  width: 358px;
+
+.form-footer-emailnewsletter__input-area {
+  height: 100%;
+  width: 100%;
+  line-height: 20px;
   border-radius: 4px;
   outline: none;
   font-size: 16px;
@@ -279,30 +289,34 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: rgba(255, 255, 255, 0.6);
   transition: var(--transition);
-  padding-left: 16px;
+  padding: 14px 15px;
 }
 
-.form-input-emailnewsletter__input-area::placeholder {
+.form-footer-emailnewsletter__input-area::placeholder {
   color: rgba(255, 255, 255, 0.6);
+  line-height: 20px;
+  padding-right: 295px;
 }
 
-.form-input-emailnewsletter__text {
+.form-footer-emailnewsletter__text {
   cursor: pointer;
 }
 
-.form-input-emailnewsletter__input-area:focus,
-.form-input-emailnewsletter__input-area:hover {
+.form-footer-emailnewsletter__input-area:focus,
+.form-footer-emailnewsletter__input-area:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .footer-btn {
-  width: 200px;
+  position: relative;
   height: 50px;
   background-color: rgba(33, 150, 243, 1);
   border: none;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
+  box-sizing: content-box;
+  padding-left: 42px;
+  text-align: left;
+  padding-right: 76px;
   padding-left: 42px;
   gap: 24px;
   font-size: 16px;
@@ -310,9 +324,19 @@ body {
   letter-spacing: 0.06em;
   color: white;
 }
+
+.footer-btn svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(148px);
+}
+
 .footer-btn:hover,
 .footer-btn:focus {
   cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
 }
 
 /* styles css for file index.html */
@@ -363,6 +387,12 @@ body {
   position: relative;
   letter-spacing: 0.06rem;
   line-height: 30px;
+  transition: var(--transition);
+}
+
+.btn-add:hover,
+.btn-add:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .is-hidden {
@@ -397,6 +427,8 @@ body {
 .modal__window__form {
   display: flex;
   flex-direction: column;
+  width: 448px;
+  margin: auto;
 }
 
 .modal__window__form__title {
@@ -409,12 +441,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center;
+  margin-bottom: 20px;
 }
+
 .modal__window__form__main-part__inputbox {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  width: inherit;
 }
 
 .modal__window__form__main-part__inputbox p {
@@ -434,13 +467,14 @@ body {
 }
 
 .modal__window__form__main-part__inputbox__input input {
-  width: 448px;
-  height: 40px;
-  padding-left: 42px;
+  width: 100%;
+  height: 100%;
+  padding: 12px 12px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
   transition: var(--transition);
+  font-size: 12px;
 }
 
 .modal__window__form__main-part__inputbox__input:focus-within {
@@ -449,6 +483,8 @@ body {
 
 .modal__window__form__main-part__inputbox__input input:focus-within {
   border: 1px solid rgba(33, 150, 243, 1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .modal__window__form__main-part__inputbox__input svg {
@@ -457,16 +493,18 @@ body {
   transform: translateY(-50%);
   margin-left: 15px;
 }
+.modal__window__form__main-part__inputbox__input svg:hover {
+  cursor: pointer;
+}
 
 .modal__window__form__main-part__inputbox__textarea {
-  width: 448px;
+  width: 100%;
   height: 120px;
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
   padding: 12px 16px;
-  margin-bottom: 20px;
   font-size: 12px;
 }
 
@@ -476,6 +514,8 @@ body {
 
 .modal__window__form__main-part__inputbox__textarea:focus-within {
   border: 1px solid rgba(33, 150, 243, 1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .modal__window__form__chekbox {
